@@ -68,14 +68,14 @@ public class InputHandler implements InputProcessor {
 
                 if(((y > 103) && (y < 150))&&((x>118) &&(x<180))) {
 
-                    screen.getScrollHandler().meterAsteroides(-200,55,8);
+                    screen.getScrollHandler().meterAsteroides(-180,55,5);
 
 
                     screen.setCurrentState(GameScreen.GameState.RUNNING);
 
                 }else if((y>108) &&(y < 158)&&((x>296)&&(x<354))){
 
-                    screen.getScrollHandler().meterAsteroides(-150,75,3);
+                    screen.getScrollHandler().meterAsteroides(-120,75,3);
 
                     screen.setCurrentState(GameScreen.GameState.RUNNING);
 

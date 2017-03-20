@@ -36,7 +36,6 @@ public class Disparo extends Actor{
         super.act(delta);
         this.position.x += 400*delta;
         balaCollision.set(position.x, position.y, width, height+2);
-        impacta(scrollHandler.getAsteroids());
     }
 
     @Override
@@ -45,19 +44,7 @@ public class Disparo extends Actor{
         batch.draw(getBalaTexture(), position.x, position.y, width, height);
     }
 
-    public boolean impacta(ArrayList<Asteroid> asteroides){
-        for (Asteroid asteroid: asteroides) {
-            if(asteroid.peta(this)){
-                Gdx.app.log("SeDestruye", "destroy");
-                this.remove();
-                asteroid.haPetado = true;
-                asteroid.setVisible(false);
 
-                return true;
-            }
-        }
-        return false;
-    }
 
     public Rectangle getBalaCollision() {return balaCollision;}
 }
